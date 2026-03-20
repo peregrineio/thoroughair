@@ -88,6 +88,73 @@ em {
 
 .tb-links a:hover { color: var(--ink); }
 
+/* Service Areas Dropdown */
+.tb-dropdown {
+  position: relative;
+}
+
+.tb-drop-trigger {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-style: italic;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.tb-drop-trigger:hover { color: var(--ink); }
+
+.tb-drop-trigger small { font-size: 0.6rem; }
+
+.tb-drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1px solid var(--faint);
+  border-radius: 12px;
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  margin-top: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  z-index: 300;
+}
+
+.tb-drop-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid var(--white);
+}
+
+.tb-dropdown:hover .tb-drop-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tb-drop-menu a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--muted);
+  transition: 0.2s ease;
+}
+
+.tb-drop-menu a:hover {
+  background: var(--frost);
+  color: var(--ember);
+}
+
 .tb-phone {
   color: #ffffff;
   text-decoration: none;
